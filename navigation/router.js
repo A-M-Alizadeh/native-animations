@@ -1,10 +1,18 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-const AppNavigator = createStackNavigator({
-    Home: {
-      screen: HomeScreen,
-    },
-  });
-  
-  export default createAppContainer(AppNavigator);
+//screens
+import Home from './../screens/Home';
+import Splash from '../screens/Splash';
+
+const RootStack = createStackNavigator(
+  {
+    Splash: Splash,
+    Home: Home,
+  },
+  {
+    initialRouteName: 'Splash',
+  }
+);
+
+export const AppContainer = createAppContainer(RootStack);
