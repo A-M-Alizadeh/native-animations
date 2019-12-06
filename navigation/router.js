@@ -12,7 +12,8 @@ const RootStack = createStackNavigator(
   },
   {
     initialRouteName: 'Splash',
-  }
+  },
+  
 );
 
 export const AppContainer = createAppContainer(RootStack);
